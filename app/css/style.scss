@@ -1,0 +1,250 @@
+
+/* animations */
+*.ng-hide {
+  opacity:0;
+}
+*.ng-show {
+	opacity: 1;
+}
+
+* {
+	-webkit-transition:all linear 0.2s;
+  	transition:all linear 0.2s;
+}
+
+
+/* global styles */
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+body {
+	color: #444;
+	background-color: #e7e7e7;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+
+h1 {
+	font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: #999;
+}
+
+.button {
+	background-color: #85c6c6;
+    background-image: linear-gradient(to bottom, #85c6c6, #62b6b6);
+    border: 1px solid #62b6b6;
+    padding: 10px 30px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.addANote {
+	position: fixed;
+	bottom: 51px;
+	background-color: #fff;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	display:-webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+	border-top: 1px solid #e7e7e7;
+}
+
+.spacer133 {
+	height: 133px;
+}
+
+.spacer60 {
+	height: 60px;
+}
+
+.addNoteBox {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	display:-webkit-flex;
+	justify-content: center;
+	-webkit-justify-content: center;
+	align-items: center;
+	-webkit-align-items: center;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+	textarea {
+	    margin-bottom: 10px;
+	    height: 158px;
+	    padding: 5px;
+	    width: 85%;
+	    resize: none;
+	    font-size: 18px;
+	    color: #444;
+	}
+	.modal {
+		background-color: #fff;
+	    height: 250px;
+	    width: 75%;
+	    display: flex;
+	    display:-webkit-flex;
+	    justify-content: center;
+	    -webkit-justify-content: center;
+	    align-items: center;
+	    -webkit-align-items: center;
+	    flex-direction: column;
+	    -webkit-flex-direction: column;
+	    border-radius: 20px;
+	    border: 1px solid #444;
+	    padding: 8px;
+	    position: relative;
+	    .removeModal {
+	        position: absolute;
+		    top: -19px;
+		    right: -11px;
+		    background: #C71E1E;
+		    color: #fff;
+		    height: 35px;
+		    width: 35px;
+		    border-radius: 50%;
+		    display: flex;
+		    display:-webkit-flex;
+		    align-items: center;
+		    -webkit-align-items: center;
+		    justify-content: center;
+		    -webkit-justify-content: center;
+		    font-size: 24px;
+	    }
+	}
+}
+
+
+/* name spaced sections */
+
+/* header */
+header {
+	position: fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    display:-webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+	background-color: #fff;
+	z-index: 1;
+	.headerDisplay {
+		display: flex;
+		display:-webkit-flex;
+		width: 100%;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+		padding: 10px 0;
+		border-bottom: 1px solid #e7e7e7;
+	}
+    .searchNotes {
+    	display: flex;
+    	display:-webkit-flex;
+	    justify-content: space-around;
+	    -webkit-justify-content: space-around;
+	    align-items: center;
+	    -webkit-align-items: center;
+	    border-bottom: 1px solid #e7e7e7;
+	    width: 100%;
+	    padding: 10px 0;
+	    input {
+	    	border-radius: 10px;
+	    	padding: 3px;
+	    }
+    }
+    img {
+    	position: relative;
+    	left: -10px;
+    	width: 50px;
+    }
+}
+
+
+/* footer */
+footer {
+	position: fixed;
+    width: 100%;
+    bottom: 0px;
+    height: 50px;
+    display: flex;
+    display:-webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+    border-top: 1px solid #e7e7e7;
+    background-color: #fff;
+}
+
+/* main content section */
+.mainContent {
+	h3 {
+		color: #f6921e;
+	    text-align: center;
+	    margin-top: 30px;
+	    line-height: 26px;
+	    letter-spacing: 1px;
+	    font-size: 20px;
+	    padding: 25px 42px;
+	}
+	.noteSection {
+
+		.note {
+		    width: 95%;
+		    margin: 2px auto;
+		    height: 60px;
+		    padding-top: 9px;
+		    position: relative;
+		    border-bottom: 1px solid #e7e7e7;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    background-color: #fff;
+		    box-sizing: border-box;
+		    line-height: 21px;
+
+			.content {
+				padding-left: 15px;
+			}
+			.dateDisplay {
+				font-weight: bold;
+			}
+			.btnGroup {
+				display: flex;
+				display:-webkit-flex;
+			    justify-content: space-around;
+			    -webkit-justify-content: space-around;
+			    padding-top: 10px;
+			}
+		}
+		.expand {
+			min-height: 60px;
+			height: 100%;
+			padding-bottom: 9px;
+	  		opacity: 1;
+		}
+
+	}
+}
+
+
+

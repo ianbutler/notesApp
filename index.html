@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="app/css/reset.css">
+	<link rel="stylesheet" href="app/css/style.css">
+
+	<script src="app/js/angular.min.js"></script>
+	<script src="app/js/angular-animate.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/controllers/main.controller.js"></script>
+	<script src="app/directives/mainSection.directive.js"></script>
+	<title>Notes App</title>
+</head>
+<body ng-controller="MyCtrl">
+	<div class="body">
+		
+	
+		<!-- this section is where you write and add notes -->
+		<!-- it is at the top because it is an absolute element relative to the body tag -->
+		<div ng-show="noteModal" class="addNoteBox">
+			<div class="modal">
+				<textarea ng-model="newNote" placeholder="Add a note here...">{{text}}</textarea>
+				<button class="button" ng-click="addNote(newNote)">Create Note</button>
+				<div ng-click="removeModal()" class="removeModal">X</div>
+			</div>
+		</div>
+
+		<header>
+			<div class="headerDisplay">
+				<img src="app/assets/zenefits-bird-logo.png" alt="">
+				<h1>NOTES</h1>
+			</div>
+		</header>
+		<div class="spacer60"></div>
+
+		<main-section></main-section>
+
+		<footer>
+			<a href="https://falconfalcon.herokuapp.com/">Created By Ian</a>
+		</footer>
+	</div>
+</body>
+</html>

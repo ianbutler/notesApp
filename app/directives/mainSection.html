@@ -1,0 +1,45 @@
+<section class="mainContent">
+	
+	<!-- Show if there are no notes -->
+	<section ng-show="!notes.length && !loadingPage">
+		<div>
+			<h3>
+				You currently don't have any notes.<br>
+				Add one below.
+			</h3>
+		</div>	
+	</section>
+
+
+
+	<!-- Show if there are notes -->
+	<section class="noteSection" ng-show="!!notes.length && !loadingPage">
+		<div class="note" 
+			ng-click="myVar = (myVar === 'expand')?'':'expand'" 
+			ng-class="myVar" 
+			ng-repeat="note in notes track by $index">
+			<div class="content">
+				<p class="dateDisplay">{{note.date | date:'short'}}</p>
+				<p>{{note.note}}</p>
+			</div>
+			<div class="btnGroup" ng-show="myVar === 'expand'">
+				<button ng-click="removeNote($index)" class="button">Remove</button>
+			</div>
+			<div class="line"></div>
+		</div>
+	</section>
+
+
+	<!-- Show while loading, just in case -->
+	<section ng-show="!!loadingPage">
+		<p>loading</p>
+	</section>
+
+
+	<div class="spacer133"></div>
+	<section class="addANote">
+		
+		<button ng-click="addNoteModal()" class="button">Add a new note</button>
+	</section>
+
+</section>
